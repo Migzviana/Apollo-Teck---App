@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1054623877639",
+    "project_id": "apollo-teck",
+    "storage_bucket": "apollo-teck.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054623877639:android:a3b3a063ccd3704372b8a2",
+        "android_client_info": {
+          "package_name": "com.example.projetoapollo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD22Hjwsij_H_rP-5TwwRRzS5OxQBRo3tw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

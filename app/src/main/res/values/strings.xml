@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">projetoApollo</string>
+    <string name="nome">Nome</string>
+    <string name="name">Name</string>
+    <string name="Nome">Nome</string>
+    <string name="Email">Email</string>
+    <string name="Senha">Senha</string>
+    <string name="Cadastrar">Cadastrar</string>
+    <string name="Apollo_teck">Apollo Teck</string>
+    <string name="acessar">Acessar</string>
+    <string name="cadastre_se">Cadastre-se</string>
+</resources>

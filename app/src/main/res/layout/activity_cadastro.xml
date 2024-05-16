@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/new_background"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp"
+    tools:context=".activity.activity.CadastroActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:text="@string/Apollo_teck"
+        android:textSize="36sp" />
+
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        android:autofillHints=""
+        android:background="@drawable/background_text"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:drawablePadding="6dp"
+        android:ems="10"
+        android:hint="@string/Nome"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#FDFBFB"
+        android:textColorHint="#F6F0F2"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        android:autofillHints=""
+        android:background="@drawable/background_text"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawablePadding="6dp"
+        android:ems="10"
+        android:hint="@string/Email"
+        android:inputType="textWebEmailAddress|textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#FDFBFB"
+        android:textColorHint="#F6F0F2"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/editTextSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        android:autofillHints=""
+        android:background="@drawable/background_text"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="6dp"
+        android:ems="10"
+        android:hint="@string/Senha"
+        android:inputType="textPersonName|textPassword"
+        android:minHeight="48dp"
+        android:textColor="#FDFBFB"
+        android:textColorHint="#F6F0F2"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buttonAcessar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/background_botao"
+        android:text="@string/Cadastrar"
+        android:textColor="#FDFBFB"
+        android:textColorHint="#F6F0F2"
+        tools:ignore="TextContrastCheck" />
+</LinearLayout>
