@@ -74,14 +74,11 @@ public class CadastroActivity extends AppCompatActivity {
                             usuario.setEmail(email);
                             usuario.setSenha(senha);
 
-                            // Aqui você pode salvar informações adicionais do usuário no Firestore ou Realtime Database, se necessário.
-
                             Toast.makeText(CadastroActivity.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
                             // Navegar para a próxima atividade ou fechar a tela de cadastro
                             // startActivity(new Intent(CadastroActivity.this, NextActivity.class));
                             // finish();
                         } else {
-                            // Se o cadastro falhar, mostrar uma mensagem para o usuário
                             Toast.makeText(CadastroActivity.this, "Falha no cadastro: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
