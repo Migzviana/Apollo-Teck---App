@@ -72,6 +72,7 @@ public class CadastroActivity extends AppCompatActivity {
                             Usuario usuario = new Usuario();
                             usuario.setNome(nome);
                             usuario.setEmail(email);
+                            usuario.setSenha(senha);
 
                             // Aqui você pode salvar informações adicionais do usuário no Firestore ou Realtime Database, se necessário.
 
