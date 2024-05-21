@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">projetoApollo</string>
-    <string name="nome">Nome</string>
-    <string name="name">Name</string>
-    <string name="Nome">Nome</string>
-    <string name="Email">Email</string>
-    <string name="Senha">Senha</string>
-    <string name="Cadastrar">Cadastrar</string>
-    <string name="Apollo_teck">Apollo Teck</string>
-    <string name="acessar">Acessar</string>
-    <string name="cadastre_se">Cadastre-se</string>
+    <string name="app_name" translatable="false">projetoApollo</string>
+    <string name="nome" translatable="false">Nome</string>
+    <string name="name" translatable="false">Name</string>
+    <string name="Nome" translatable="false">Nome</string>
+    <string name="Email" translatable="false">Email</string>
+    <string name="Senha" translatable="false">Senha</string>
+    <string name="Cadastrar" translatable="false">Cadastrar</string>
+    <string name="Apollo_teck" translatable="false">Apollo Teck</string>
+    <string name="acessar" translatable="false">Acessar</string>
+    <string name="cadastre_se" translatable="false">Cadastre-se</string>
 </resources>

@@ -28,10 +28,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Inicializar Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
-        // Referenciar componentes
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextSenha = findViewById(R.id.editTextSenha);
         buttonLogin = findViewById(R.id.buttonLogin);
@@ -59,7 +57,6 @@ public class LoginActivity extends AppCompatActivity {
         buttonCadastreSe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navegar para a tela de cadastro
                 startActivity(new Intent(LoginActivity.this, CadastroActivity.class));
                 finish();
             }
@@ -72,19 +69,15 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Login bem-sucedido
                             Toast.makeText(LoginActivity.this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show();
-                            // Navegar para a próxima atividade
-                            // startActivity(new Intent(LoginActivity.this, NextActivity.class));
-                            // finish();
+                            // Navegar para HomeActivity
+                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                            startActivity(intent);
+                            finish();
                         } else {
-                            // Se o login falhar, mostrar uma mensagem para o usuário
                             Toast.makeText(LoginActivity.this, "Falha no login: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
-    }
-
-    public void registerUser(View view) {
     }
 }
