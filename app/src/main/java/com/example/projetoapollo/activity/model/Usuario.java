@@ -1,8 +1,9 @@
 package com.example.projetoapollo.activity.model;
 
 public class Usuario {
-
-    private String nome,email,senha;
+    private String nome;
+    private String email;
+    private String senha;
 
     public Usuario() {
     }
