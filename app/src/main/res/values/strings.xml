@@ -9,4 +9,6 @@
     <string name="Apollo_teck" translatable="false">Apollo Teck</string>
     <string name="acessar" translatable="false">Acessar</string>
     <string name="cadastre_se" translatable="false">Cadastre-se</string>
+    <string name="navigation_drawer_open">Abrir Navegação</string>
+    <string name="navigation_drawer_close">Fechar Navegação</string>
 </resources>
