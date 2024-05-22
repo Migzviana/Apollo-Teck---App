@@ -1,21 +1,21 @@
 package com.example.projetoapollo.activity.activity;
 
-import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import com.google.android.material.navigation.NavigationView;
-import android.view.MenuItem;
+
 import com.example.projetoapollo.R;
-import com.example.projetoapollo.activity.fragment.HomeFragment;
 import com.example.projetoapollo.activity.fragment.ComprarPacotesFragment;
+import com.example.projetoapollo.activity.fragment.HomeFragment;
 import com.example.projetoapollo.activity.fragment.UsuariosFragment;
+import com.google.android.material.navigation.NavigationView;
 
 public class HomeActivity extends AppCompatActivity {
 
