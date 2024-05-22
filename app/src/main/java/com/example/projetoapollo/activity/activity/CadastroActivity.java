@@ -28,10 +28,12 @@ public class CadastroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        // Inicializar Firebase Auth
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         mAuth = FirebaseAuth.getInstance();
 
-        // Referenciar componentes
         editTextNome = findViewById(R.id.editTextNome);
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextSenha = findViewById(R.id.editTextSenha);
@@ -75,9 +77,7 @@ public class CadastroActivity extends AppCompatActivity {
                             usuario.setSenha(senha);
 
                             Toast.makeText(CadastroActivity.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
-                            // Navegar para a próxima atividade ou fechar a tela de cadastro
-                            // startActivity(new Intent(CadastroActivity.this, NextActivity.class));
-                            // finish();
+
                         } else {
                             Toast.makeText(CadastroActivity.this, "Falha no cadastro: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }

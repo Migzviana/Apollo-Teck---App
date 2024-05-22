@@ -4,15 +4,12 @@
         android:icon="@drawable/nav_apollo"
         android:title="Home" />
     <item
-        android:id="@+id/nav_profile"
+        android:id="@+id/nav_comprar_pacotes"
+        android:icon="@drawable/nav_comprar_pacotes"
+        android:title="Comprar Pacotes" />
+    <item
+        android:id="@+id/nav_usuarios"
         android:icon="@drawable/nav_usuario"
-        android:title="Profile" />
-    <item
-        android:id="@+id/nav_settings"
-        android:icon="@drawable/nav_config"
-        android:title="Settings" />
-    <item
-        android:id="@+id/nav_logout"
-        android:icon="@drawable/nav_exit"
-        android:title="Logout" />
+        android:title="Usuario" />
+
 </menu>
