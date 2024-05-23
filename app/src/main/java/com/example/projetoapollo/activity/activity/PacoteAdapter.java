@@ -6,25 +6,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.projetoapollo.R;
 import com.example.projetoapollo.activity.model.PacoteViagem;
 
 import java.util.List;
 
-public class AdaptadorPacote extends RecyclerView.Adapter<AdaptadorPacote.PacoteViewHolder> {
+public class PacoteAdapter extends RecyclerView.Adapter<PacoteAdapter.PacoteViewHolder> {
 
     private Context context;
     private List<PacoteViagem> pacotes;
 
-    public AdaptadorPacote(Context context, List<PacoteViagem> pacotes) {
+    public PacoteAdapter(Context context, List<PacoteViagem> pacotes) {
         this.context = context;
         this.pacotes = pacotes;
     }
-
 
     @NonNull
     @Override
@@ -33,11 +30,11 @@ public class AdaptadorPacote extends RecyclerView.Adapter<AdaptadorPacote.Pacote
         return new PacoteViewHolder(view);
     }
 
-
     @Override
     public void onBindViewHolder(@NonNull PacoteViewHolder holder, int position) {
         PacoteViagem pacote = pacotes.get(position);
         holder.imageViewLocal.setImageResource(pacote.getImagemLocal());
+        holder.textViewNomeLocal.setText(pacote.getNomeLocal());
         holder.textViewValor.setText(pacote.getValor());
         holder.textViewTempoEstadia.setText(pacote.getTempoEstadia());
     }
@@ -50,15 +47,16 @@ public class AdaptadorPacote extends RecyclerView.Adapter<AdaptadorPacote.Pacote
     public static class PacoteViewHolder extends RecyclerView.ViewHolder {
 
         ImageView imageViewLocal;
+        TextView textViewNomeLocal;
         TextView textViewValor;
         TextView textViewTempoEstadia;
 
         public PacoteViewHolder(@NonNull View itemView) {
             super(itemView);
             imageViewLocal = itemView.findViewById(R.id.imageViewLocal);
+            textViewNomeLocal = itemView.findViewById(R.id.textViewNomeLocal);
             textViewValor = itemView.findViewById(R.id.textViewValor);
             textViewTempoEstadia = itemView.findViewById(R.id.textViewTempoEstadia);
         }
     }
 }
-

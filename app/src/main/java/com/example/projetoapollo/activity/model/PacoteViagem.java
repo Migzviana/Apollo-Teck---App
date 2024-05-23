@@ -3,11 +3,13 @@ package com.example.projetoapollo.activity.model;
 public class PacoteViagem {
 
     private int imagemLocal;
+    private String nomeLocal;
     private String valor;
     private String tempoEstadia;
 
-    private PacoteViagem(int imagemLocal, String valor, String tempoEstadia){
+    public PacoteViagem(int imagemLocal, String nomeLocal, String valor, String tempoEstadia) {
         this.imagemLocal = imagemLocal;
+        this.nomeLocal = nomeLocal;
         this.valor = valor;
         this.tempoEstadia = tempoEstadia;
     }
@@ -20,6 +22,14 @@ public class PacoteViagem {
         this.imagemLocal = imagemLocal;
     }
 
+    public String getNomeLocal() {
+        return nomeLocal;
+    }
+
+    public void setNomeLocal(String nomeLocal) {
+        this.nomeLocal = nomeLocal;
+    }
+
     public String getValor() {
         return valor;
     }
@@ -28,7 +38,7 @@ public class PacoteViagem {
         this.valor = valor;
     }
 
-    public String getTempoEstadia(){
+    public String getTempoEstadia() {
         return tempoEstadia;
     }
 

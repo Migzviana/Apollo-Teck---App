@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projetoapollo.R;
-import com.example.projetoapollo.activity.activity.AdaptadorPacote;
+import com.example.projetoapollo.activity.activity.PacoteAdapter;
 import com.example.projetoapollo.activity.model.PacoteViagem;
 
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ import java.util.List;
 public class ComprarPacotesFragment extends Fragment {
 
     private RecyclerView recyclerViewPacotes;
-    private AdaptadorPacote pacoteAdapter;
+    private PacoteAdapter pacoteAdapter;
     private List<PacoteViagem> listaPacotes;
 
     @Nullable
@@ -33,11 +33,12 @@ public class ComprarPacotesFragment extends Fragment {
         recyclerViewPacotes.setLayoutManager(new LinearLayoutManager(getContext()));
 
         listaPacotes = new ArrayList<>();
-        listaPacotes.add(new PacoteViagem(R.drawable.sample_image, "R$ 1200,00", "7 dias"));
-        listaPacotes.add(new PacoteViagem(R.drawable.sample_image, "R$ 1500,00", "10 dias"));
-        listaPacotes.add(new PacoteViagem(R.drawable.sample_image, "R$ 2000,00", "14 dias"));
+        listaPacotes.add(new PacoteViagem(R.drawable.brasilia, "Brasilia", "R$ 1500", "5 dias"));
+        listaPacotes.add(new PacoteViagem(R.drawable.rio_de_janeiro, "Rio de Janeiro", "R$ 2000", "7 dias"));
+        listaPacotes.add(new PacoteViagem(R.drawable.sao_paulo, "São Paulo", "R$ 1800", "6 dias"));
 
-        pacoteAdapter = new AdaptadorPacote(getContext(), listaPacotes);
+
+        pacoteAdapter = new PacoteAdapter(getContext(), listaPacotes);
         recyclerViewPacotes.setAdapter(pacoteAdapter);
 
         return view;
