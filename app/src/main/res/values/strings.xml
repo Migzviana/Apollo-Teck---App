@@ -11,4 +11,5 @@
     <string name="cadastre_se" translatable="false">Cadastre-se</string>
     <string name="navigation_drawer_open">Abrir Navegação</string>
     <string name="navigation_drawer_close">Fechar Navegação</string>
+    <string name="voltar_para_o_login">Voltar para o Login</string>
 </resources>
