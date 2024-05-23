@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.AppCompatButton;
 import com.example.projetoapollo.R;
 import com.example.projetoapollo.activity.model.PacoteViagem;
 
@@ -37,6 +38,14 @@ public class PacoteAdapter extends RecyclerView.Adapter<PacoteAdapter.PacoteView
         holder.textViewNomeLocal.setText(pacote.getNomeLocal());
         holder.textViewValor.setText(pacote.getValor());
         holder.textViewTempoEstadia.setText(pacote.getTempoEstadia());
+
+        holder.buttonProsseguir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Defina a ação que deseja realizar ao clicar no botão "Ver Mais"
+                // Pode ser abrir uma nova atividade ou exibir um diálogo com mais detalhes
+            }
+        });
     }
 
     @Override
@@ -50,6 +59,7 @@ public class PacoteAdapter extends RecyclerView.Adapter<PacoteAdapter.PacoteView
         TextView textViewNomeLocal;
         TextView textViewValor;
         TextView textViewTempoEstadia;
+        AppCompatButton buttonProsseguir;
 
         public PacoteViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -57,6 +67,7 @@ public class PacoteAdapter extends RecyclerView.Adapter<PacoteAdapter.PacoteView
             textViewNomeLocal = itemView.findViewById(R.id.textViewNomeLocal);
             textViewValor = itemView.findViewById(R.id.textViewValor);
             textViewTempoEstadia = itemView.findViewById(R.id.textViewTempoEstadia);
+            buttonProsseguir = itemView.findViewById(R.id.buttonProsseguir);
         }
     }
 }
