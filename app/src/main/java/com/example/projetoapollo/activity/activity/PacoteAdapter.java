@@ -42,8 +42,7 @@ public class PacoteAdapter extends RecyclerView.Adapter<PacoteAdapter.PacoteView
         holder.buttonProsseguir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Defina a ação que deseja realizar ao clicar no botão "Ver Mais"
-                // Pode ser abrir uma nova atividade ou exibir um diálogo com mais detalhes
+
             }
         });
     }
