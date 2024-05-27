@@ -17,9 +17,9 @@ public class RioFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_brasilia, container, false);
+        View view = inflater.inflate(R.layout.fragment_rio, container, false);
 
-        int[] hotelImageIds = {R.id.imgHotelRio1, R.id.imgHotelRio2, R.id.imgHotelRio3, R.id.imgHotelRio4};
+        int[] hotelImageIds = {R.id.imghotelrio1, R.id.imgHotelRio2, R.id.imgHotelRio3, R.id.imgHotelRio4};
         int[] hotelImages = {R.drawable.hotel_rio1, R.drawable.hotel_rio2, R.drawable.hotel_rio3, R.drawable.hotel_rio4};
         setImageClickListeners(view, hotelImageIds, hotelImages);
 

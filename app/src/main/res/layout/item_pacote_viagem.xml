@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:layout_marginTop="4dp"
-            android:text="Tempo de Estadia"
+            android:text="Tempo de Estadia:"
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatButton

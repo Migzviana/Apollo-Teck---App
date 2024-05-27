@@ -4,13 +4,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridLayout;
 import android.widget.ImageView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import com.example.projetoapollo.R;
+import com.example.projetoapollo.activity.fragment.ImageDialogFragment;
 
 public class BrasiliaFragment extends Fragment {
 
@@ -19,30 +19,38 @@ public class BrasiliaFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_brasilia, container, false);
 
-        // Set OnClickListeners for hotel images
-        int[] hotelImageIds = {R.id.imgHotelBrasilia1, R.id.imgHotelBrasilia2, R.id.imgHotelBrasilia3, R.id.imgHotelBrasilia4};
-        int[] hotelImages = {R.drawable.hotel_brasilia1, R.drawable.hotel_brasilia2, R.drawable.hotel_brasilia3, R.drawable.hotel_brasilia4};
-        setImageClickListeners(view, hotelImageIds, hotelImages);
+        // Referências aos GridLayouts
+        GridLayout gridLayoutHotels = view.findViewById(R.id.gridLayoutHotels);
+        GridLayout gridLayoutTourist = view.findViewById(R.id.gridLayoutTourist);
 
-        // Set OnClickListeners for tourist images
-        int[] touristImageIds = {R.id.imgTouristBrasilia1, R.id.imgTouristBrasilia2, R.id.imgTouristBrasilia3, R.id.imgTouristBrasilia4};
+        // Arrays de IDs e imagens para hotéis
+        int[] hotelImages = {R.drawable.hotel_brasilia1, R.drawable.hotel_brasilia2, R.drawable.hotel_brasilia3, R.drawable.hotel_brasilia4};
+        addImagesToGridLayout(gridLayoutHotels, hotelImages);
+
+        // Arrays de IDs e imagens para pontos turísticos
         int[] touristImages = {R.drawable.tourist_brasilia1, R.drawable.tourist_brasilia2, R.drawable.tourist_brasilia3, R.drawable.tourist_brasilia4};
-        setImageClickListeners(view, touristImageIds, touristImages);
+        addImagesToGridLayout(gridLayoutTourist, touristImages);
 
         return view;
     }
 
-    private void setImageClickListeners(View view, int[] imageIds, int[] imageResIds) {
-        for (int i = 0; i < imageIds.length; i++) {
-            final int imageResId = imageResIds[i];
-            ImageView imageView = view.findViewById(imageIds[i]);
+    private void addImagesToGridLayout(GridLayout gridLayout, int[] imageResIds) {
+        for (final int imageResId : imageResIds) {
+            ImageView imageView = new ImageView(getContext());
+            imageView.setLayoutParams(new ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+            ));
+            imageView.setImageResource(imageResId);
+            imageView.setPadding(8, 8, 8, 8);
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     ImageDialogFragment.newInstance(imageResId).show(getParentFragmentManager(), "imageDialog");
                 }
             });
+            gridLayout.addView(imageView);
         }
     }
 }
-
