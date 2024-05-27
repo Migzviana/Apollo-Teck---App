@@ -1,0 +1,113 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hotel"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/imgHotelBrasilia1"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/hotel_brasilia"
+                android:src="@drawable/hotel_brasilia1" />
+
+            <ImageView
+                android:id="@+id/imgHotelBrasilia2"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/hotel_brasilia"
+                android:src="@drawable/hotel_brasilia2" />
+
+            <ImageView
+                android:id="@+id/imgHotelBrasilia3"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/hotel_brasilia"
+                android:src="@drawable/hotel_brasilia3" />
+
+            <ImageView
+                android:id="@+id/imgHotelBrasilia4"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/hotel_brasilia"
+                android:src="@drawable/hotel_brasilia4" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pontos Turísticos"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/imgTouristBrasilia1"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/tourist_brasilia"
+                android:src="@drawable/tourist_brasilia1" />
+
+            <ImageView
+                android:id="@+id/imgTouristBrasilia2"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/tourist_brasilia"
+                android:src="@drawable/tourist_brasilia2" />
+
+            <ImageView
+                android:id="@+id/imgTouristBrasilia3"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/tourist_brasilia"
+                android:src="@drawable/tourist_brasilia3" />
+
+            <ImageView
+                android:id="@+id/imgTouristBrasilia4"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/tourist_brasilia"
+                android:src="@drawable/tourist_brasilia4" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,5 +1,6 @@
 package com.example.projetoapollo.activity.activity;
 
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -33,7 +34,7 @@ public class HomeActivity extends AppCompatActivity {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-            getWindow().setStatusBarColor(android.graphics.Color.TRANSPARENT);
+            getWindow().setStatusBarColor(Color.BLACK);
         }
 
             if (getSupportActionBar() != null) {
@@ -81,7 +82,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        // Exibir HomeFragment por padrão
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
