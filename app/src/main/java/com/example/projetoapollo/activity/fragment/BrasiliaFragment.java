@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projetoapollo.R;
 import com.example.projetoapollo.activity.adapters.ImagesAdapter;
+import com.google.android.flexbox.FlexboxLayout;
+import com.google.android.flexbox.FlexboxLayoutManager;
 
 public class BrasiliaFragment extends Fragment {
 
@@ -32,7 +34,7 @@ public class BrasiliaFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_brasilia, container, false);
 
         RecyclerView recyclerView = view.findViewById(R.id.recyclerViewImages);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2)); // Define 2 colunas
+        FlexboxLayoutManager layoutManager = new FlexboxLayoutManager(getContext());
         ImagesAdapter adapter = new ImagesAdapter(getContext(), imageResources);
         recyclerView.setAdapter(adapter);
 
