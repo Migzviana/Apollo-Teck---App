@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projetoapollo.R;
-import com.example.projetoapollo.activity.activity.PacoteAdapter;
+import com.example.projetoapollo.activity.adapters.PacoteAdapter;
 import com.example.projetoapollo.activity.model.PacoteViagem;
 
 import java.util.ArrayList;

@@ -6,12 +6,14 @@ public class PacoteViagem {
     private String nomeLocal;
     private String valor;
     private String tempoEstadia;
+    private int imageResourceId;
 
     public PacoteViagem(int imagemLocal, String nomeLocal, String valor, String tempoEstadia) {
         this.imagemLocal = imagemLocal;
         this.nomeLocal = nomeLocal;
         this.valor = valor;
         this.tempoEstadia = tempoEstadia;
+        this.imageResourceId = imageResourceId;
     }
 
     public int getImagemLocal() {
@@ -45,4 +47,9 @@ public class PacoteViagem {
     public void setTempoEstadia(String tempoEstadia) {
         this.tempoEstadia = tempoEstadia;
     }
+
+    public int getImageResourceId() {
+        return imageResourceId;
+    }
 }
+

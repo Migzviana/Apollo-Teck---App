@@ -1,4 +1,4 @@
-package com.example.projetoapollo.activity.activity;
+package com.example.projetoapollo.activity.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,9 +7,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.AppCompatButton;
 import com.example.projetoapollo.R;
+import com.example.projetoapollo.activity.fragment.BrasiliaFragment;
+import com.example.projetoapollo.activity.fragment.RioFragment;
+import com.example.projetoapollo.activity.fragment.SaoPauloFragment;
 import com.example.projetoapollo.activity.model.PacoteViagem;
 
 import java.util.List;
@@ -42,7 +47,26 @@ public class PacoteAdapter extends RecyclerView.Adapter<PacoteAdapter.PacoteView
         holder.buttonProsseguir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Fragment fragment = null;
+                switch (pacote.getNomeLocal()){
+                    case "Brasilia":
+                        fragment = new BrasiliaFragment();
+                        break;
+                    case "Rio de Janeiro":
+                        fragment = new RioFragment();
+                        break;
+                    case "São Paulo":
+                        fragment = new SaoPauloFragment();
+                        break;
+                }
 
+                if (fragment != null){
+                    ((FragmentActivity) context).getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.fragment_container, fragment)
+                            .addToBackStack(null)
+                            .commit();
+                }
             }
         });
     }
