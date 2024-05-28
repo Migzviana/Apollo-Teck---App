@@ -31,9 +31,9 @@
    <ImageView
        android:layout_width="0dp"
        android:layout_height="150dp"
-      android:layout_margin="1dp"
-      android:scaleType="centerCrop"
-      app:layout_flexBasisPercent="45%"
-      android:src="@drawable/hotel_sp4" />
+       android:layout_margin="1dp"
+       android:scaleType="centerCrop"
+       app:layout_flexBasisPercent="45%"
+       android:src="@drawable/hotel_sp4" />
 
 </com.google.android.flexbox.FlexboxLayout>
