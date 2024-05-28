@@ -20,7 +20,6 @@ public class BrasiliaFragment extends Fragment {
             R.drawable.hotel_brasilia1,
             R.drawable.hotel_brasilia2,
             R.drawable.hotel_brasilia3,
-            R.drawable.hotel_brasilia4,
             R.drawable.tourist_brasilia1,
             R.drawable.tourist_brasilia2,
             R.drawable.tourist_brasilia3,
