@@ -18,26 +18,11 @@ import com.example.projetoapollo.activity.adapters.ImagesAdapter;
 
 public class SaoPauloFragment extends Fragment {
 
-    private final int[] imageResources = {
-            R.drawable.hotel_brasilia1,
-            R.drawable.hotel_brasilia2,
-            R.drawable.hotel_brasilia3,
-            R.drawable.tourist_brasilia1,
-            R.drawable.tourist_brasilia2,
-            R.drawable.tourist_brasilia3,
-            R.drawable.tourist_brasilia4
-    };
-
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_brasilia, container, false);
-
-        RecyclerView recyclerView = view.findViewById(R.id.recyclerViewImages);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2)); // Define 2 colunas
-        ImagesAdapter adapter = new ImagesAdapter(getContext(), imageResources);
-        recyclerView.setAdapter(adapter);
-
-        return view;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_sao_paulo, container, false);
     }
 }
+

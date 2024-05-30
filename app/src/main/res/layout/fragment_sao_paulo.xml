@@ -3,37 +3,73 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:alignContent="flex_start"
     app:flexWrap="wrap"
-    app:showDivider="beginning|middle"
-    app:dividerDrawable="@drawable/divider"
+    app:justifyContent="space_between"
     android:background="@color/corApollo"
-    android:padding="1dp">
+    android:padding="10dp">
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:fontFamily="sans-serif-medium"
+       android:text="@string/hotel_sp_palavras"
+       android:layout_marginTop="40dp"
+       android:layout_marginBottom="40dp"
+       android:textSize="16sp"
+       android:layout_marginRight="2dp"
+       android:textAlignment="center"
+       android:textColor="@color/white"/>
+
+   <ImageView
+         android:layout_width="0dp"
+         android:layout_height="170dp"
+         android:layout_marginLeft="10px"
+         android:layout_marginBottom="10dp"
+         app:layout_flexBasisPercent="100%"
+         android:scaleType="centerCrop"
+         android:src="@drawable/hotel_sp4"/>
+
+   <ImageView
+       android:layout_width="100dp"
+       android:layout_height="250dp"
+       android:layout_marginBottom="10dp"
+       android:src="@drawable/hotel_sp2"
+       android:scaleType="centerCrop"
+       android:layout_margin="2dp"
+       app:layout_flexBasisPercent="100%"
+       />
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:fontFamily="sans-serif-medium"
+       android:textColor="@color/white"
+       android:layout_marginTop="20dp"
+       android:textAlignment="center"
+       android:layout_marginBottom="20dp"
+       android:text="Confira aqui os principais pontos Turisticos desse Local:"/>
 
    <ImageView
        android:layout_width="0dp"
-       android:layout_height="150dp"
-       android:layout_margin="3dp"
-       android:layout_marginRight="150dp"
-       android:scaleType="centerCrop"
-       app:layout_flexBasisPercent="130%"
-       android:src="@drawable/hotel_sp4"/>
-
-
-   <ImageView
-       android:layout_width="0dp"
-       android:layout_height="150dp"
-       android:layout_margin="1dp"
-       android:scaleType="centerCrop"
-       app:layout_flexBasisPercent="50%"
-       android:src="@drawable/hotel_sp3"/>
-
-   <ImageView
-       android:layout_width="0dp"
-       android:layout_height="150dp"
-       android:layout_margin="1dp"
-       android:scaleType="centerCrop"
+       android:layout_height="170dp"
+       android:layout_marginLeft="10px"
+       android:layout_marginBottom="20dp"
        app:layout_flexBasisPercent="45%"
-       android:src="@drawable/hotel_sp4" />
+       android:scaleType="centerCrop"
+       android:src="@drawable/tourist_sp2" />
+
+   <ImageView
+       android:layout_width="0dp"
+       android:layout_height="170dp"
+       app:layout_flexBasisPercent="45%"
+       android:src="@drawable/tourist_sp3"/>
+
+   <ImageView
+       android:layout_width="0dp"
+       android:layout_height="150dp"
+       android:layout_margin="1dp"
+       app:layout_flexBasisPercent="100%"
+       android:src="@drawable/tourist_sp1"
+       />
 
 </com.google.android.flexbox.FlexboxLayout>

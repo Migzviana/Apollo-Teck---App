@@ -6,14 +6,11 @@
     app:flexWrap="wrap"
     app:justifyContent="space_between">
 
-
-
    <ImageView
-       android:layout_marginTop=""
        android:layout_width="0dp"
        android:layout_height="150dp"
        android:layout_margin="4dp"
-       app:layout_flexBasisPercent="90%"
+       app:layout_flexBasisPercent="100%"
        android:scaleType="centerCrop"
        android:src="@drawable/hotel_brasilia2" />
 
