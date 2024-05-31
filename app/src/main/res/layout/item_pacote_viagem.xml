@@ -5,12 +5,10 @@
     android:layout_margin="8dp"
     android:elevation="4dp">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/white"
         android:padding="16dp">
 
         <ImageView
@@ -18,22 +16,25 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/brasilia" />
+            android:src="@drawable/sample_image" />
 
         <TextView
             android:id="@+id/textViewNomeLocal"
-            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="8dp"
+            android:text="Nome do Local"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewValor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textColor="@color/black"
+            android:layout_marginTop="4dp"
             android:text="Valor"
+            android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -41,18 +42,18 @@
             android:id="@+id/textViewTempoEstadia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
             android:layout_marginTop="4dp"
-            android:text="Tempo de Estadia:"
+            android:text="Tempo de Estadia"
+            android:textColor="@color/black"
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonProsseguir"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/background_button_cadastre_se"
-            android:textColor="#FFFF"
-            android:text="Ver Mais" />
+            android:text="Ver Mais"
+            android:textColor="@color/white" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
