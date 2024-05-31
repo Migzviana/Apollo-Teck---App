@@ -24,7 +24,7 @@
           android:textColor="@color/white"
           android:fontFamily="sans-serif-medium"
           android:textAlignment="center"
-          android:textSize="20sp"/>
+          android:textSize="20dp"/>
 
       <TextView
           android:layout_width="match_parent"
@@ -52,7 +52,7 @@
           android:layout_height="250dp"
           android:layout_margin="3dp"
           android:scaleType="centerCrop"
-          app:layout_flexBasisPercent="45%"
+          app:layout_flexBasisPercent="44%"
           android:src="@drawable/hotel_sp1"
           app:shapeAppearanceOverlay="@style/RoundedCorners"/>
 
@@ -73,6 +73,7 @@
           android:layout_marginTop="15dp"
           android:layout_marginBottom="15dp"
           android:text="@string/pontoturistico_sp"
+          android:textSize="18sp"
           android:textColor="@color/white"/>
 
       <com.google.android.material.imageview.ShapeableImageView
@@ -91,7 +92,7 @@
           android:layout_height="250dp"
           android:layout_margin="3dp"
           android:scaleType="centerCrop"
-          app:layout_flexBasisPercent="45%"
+          app:layout_flexBasisPercent="44%"
           android:src="@drawable/tourist_sp2"
           app:shapeAppearanceOverlay="@style/RoundedCorners"/>
 
