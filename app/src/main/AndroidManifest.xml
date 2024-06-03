@@ -18,6 +18,8 @@
             android:exported="true">
         </activity>
 
+        <activity android:name=".activity.activity.PagamentoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".activity.activity.CadastroActivity"
             android:exported="false">

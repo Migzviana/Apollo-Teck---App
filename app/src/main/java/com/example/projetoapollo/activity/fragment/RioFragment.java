@@ -1,20 +1,21 @@
 package com.example.projetoapollo.activity.fragment;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import androidx.fragment.app.Fragment;
-
 import com.example.projetoapollo.R;
 
-public class RioFragment extends Fragment {
+public class RioFragment extends BaseImageFragment {
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    protected int getLayoutResId() {
+        return R.layout.fragment_rio;
+    }
 
-        return inflater.inflate(R.layout.fragment_sao_paulo, container, false);
+    @Override
+    protected int[] getImageViewIds() {
+        return new int[] {R.id.hotelrio1, R.id.hotelrio2, R.id.hotelrio3, R.id.turismorio1, R.id.turismorio2, R.id.turismorio3};
+    }
+
+    @Override
+    protected int[] getImageResources() {
+        return new int[] {R.drawable.hotel_rio1, R.drawable.hotel_rio2, R.drawable.hotel_rio3, R.drawable.tourist_rio1, R.drawable.tourist_rio2, R.drawable.tourist_rio3};
     }
 }

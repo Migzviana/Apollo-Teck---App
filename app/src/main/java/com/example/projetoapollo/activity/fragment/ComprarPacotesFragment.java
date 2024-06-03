@@ -33,7 +33,7 @@ public class ComprarPacotesFragment extends Fragment {
         recyclerViewPacotes.setLayoutManager(new LinearLayoutManager(getContext()));
 
         listaPacotes = new ArrayList<>();
-        listaPacotes.add(new PacoteViagem(R.drawable.brasilia, "Brasilia", "R$ 1500", "Tempo de Estadia: 5 dias"));
+        listaPacotes.add(new PacoteViagem(R.drawable.brasilia, "Recife", "R$ 1500", "Tempo de Estadia: 5 dias"));
         listaPacotes.add(new PacoteViagem(R.drawable.rio_de_janeiro, "Rio de Janeiro", "R$ 2000", "Tempo de Estadia: 7 dias"));
         listaPacotes.add(new PacoteViagem(R.drawable.sao_paulo, "São Paulo", "R$ 1800", "Tempo de Estadia: 6 dias"));
 

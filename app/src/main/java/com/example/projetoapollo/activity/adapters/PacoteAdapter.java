@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.AppCompatButton;
 import com.example.projetoapollo.R;
 import com.example.projetoapollo.activity.fragment.BrasiliaFragment;
+import com.example.projetoapollo.activity.fragment.RecifeFragment;
 import com.example.projetoapollo.activity.fragment.RioFragment;
 import com.example.projetoapollo.activity.fragment.SaoPauloFragment;
 import com.example.projetoapollo.activity.model.PacoteViagem;
@@ -49,8 +50,8 @@ public class PacoteAdapter extends RecyclerView.Adapter<PacoteAdapter.PacoteView
             public void onClick(View v) {
                 Fragment fragment = null;
                 switch (pacote.getNomeLocal()){
-                    case "Brasilia":
-                        fragment = new BrasiliaFragment();
+                    case "Recife":
+                        fragment = new RecifeFragment();
                         break;
                     case "Rio de Janeiro":
                         fragment = new RioFragment();

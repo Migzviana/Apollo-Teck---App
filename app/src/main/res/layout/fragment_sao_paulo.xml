@@ -24,7 +24,7 @@
           android:textColor="@color/white"
           android:fontFamily="sans-serif-medium"
           android:textAlignment="center"
-          android:textSize="20dp"/>
+          android:textSize="20dp" />
 
       <TextView
           android:layout_width="match_parent"
@@ -34,10 +34,11 @@
           android:text="@string/string_hotel_sp"
           android:fontFamily="sans-serif-medium"
           android:textColor="@color/white"
+          android:textSize="19sp"
           android:textAlignment="center" />
 
       <com.google.android.material.imageview.ShapeableImageView
-          android:id="@+id/imageView1"
+          android:id="@+id/hotelsp1"
           android:layout_width="0dp"
           android:layout_height="150dp"
           android:layout_margin="3dp"
@@ -47,7 +48,7 @@
           app:shapeAppearanceOverlay="@style/RoundedCorners"/>
 
       <com.google.android.material.imageview.ShapeableImageView
-          android:id="@+id/imageView2"
+          android:id="@+id/hotelsp2"
           android:layout_width="0dp"
           android:layout_height="250dp"
           android:layout_margin="3dp"
@@ -57,7 +58,7 @@
           app:shapeAppearanceOverlay="@style/RoundedCorners"/>
 
       <com.google.android.material.imageview.ShapeableImageView
-          android:id="@+id/imageView3"
+          android:id="@+id/hotelsp3"
           android:layout_width="0dp"
           android:layout_height="250dp"
           android:layout_margin="3dp"
@@ -72,12 +73,12 @@
           android:textAlignment="center"
           android:layout_marginTop="15dp"
           android:layout_marginBottom="15dp"
+          android:textSize="19sp"
           android:text="@string/pontoturistico_sp"
-          android:textSize="18sp"
           android:textColor="@color/white"/>
 
       <com.google.android.material.imageview.ShapeableImageView
-          android:id="@+id/imageView4"
+          android:id="@+id/turismosp1"
           android:layout_width="0dp"
           android:layout_height="250dp"
           android:layout_margin="3dp"
@@ -87,7 +88,7 @@
           app:shapeAppearanceOverlay="@style/RoundedCorners"/>
 
       <com.google.android.material.imageview.ShapeableImageView
-          android:id="@+id/imageView5"
+          android:id="@+id/turismosp2"
           android:layout_width="0dp"
           android:layout_height="250dp"
           android:layout_margin="3dp"
@@ -97,7 +98,7 @@
           app:shapeAppearanceOverlay="@style/RoundedCorners"/>
 
       <com.google.android.material.imageview.ShapeableImageView
-          android:id="@+id/imageView6"
+          android:id="@+id/turismosp3"
           android:layout_width="0dp"
           android:layout_height="150dp"
           android:layout_margin="3dp"
@@ -105,6 +106,17 @@
           android:src="@drawable/tourist_sp3"
           app:layout_flexBasisPercent="100%"
           app:shapeAppearanceOverlay="@style/RoundedCorners"/>
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/buttontelaCompra"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp"
+          android:text="Comprar Pacote"
+          android:textColor="@color/white"
+          android:fontFamily="sans-serif-medium"
+          android:background="@drawable/background_button_cadastre_se"/>
    </com.google.android.flexbox.FlexboxLayout>
 </ScrollView>
 
