@@ -40,6 +40,13 @@
             android:layout_height="match_parent"
             android:layout_marginTop="15dp" />
 
+        <com.stripe.android.view.CardInputWidget
+            android:id="@+id/cardInputWidget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="16dp" />
+
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView

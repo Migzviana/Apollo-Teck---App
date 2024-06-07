@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.projetoapollo.R;
+import com.example.projetoapollo.activity.adapters.DepthPageTransforme;
 import com.example.projetoapollo.activity.adapters.AdaptadorSlider;
 import com.example.projetoapollo.activity.fragment.ComprarPacotesFragment;
 import com.example.projetoapollo.activity.fragment.HomeFragment;
@@ -53,6 +54,9 @@ public class HomeActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.view_pager);
         adaptadorSlider = new AdaptadorSlider(this, getImages());
         viewPager.setAdapter(adaptadorSlider);
+
+        // Aplicar o PageTransformer
+        viewPager.setPageTransformer(new DepthPageTransforme());
 
         // Configurar o DrawerLayout e o NavigationView
         drawerLayout = findViewById(R.id.drawer_layout);

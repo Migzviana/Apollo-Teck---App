@@ -1,4 +1,4 @@
-<!-- R.layout.item_slider -->
+
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/image_slider"
     android:layout_width="match_parent"
