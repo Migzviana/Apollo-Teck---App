@@ -1,13 +1,12 @@
 package com.example.projetoapollo.activity.activity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,14 +16,13 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-
 import com.example.projetoapollo.R;
 import com.example.projetoapollo.activity.adapters.AdaptadorCompra;
 import com.example.projetoapollo.activity.fragment.ComprarPacotesFragment;
-import com.example.projetoapollo.activity.fragment.HomeFragment;
 import com.example.projetoapollo.activity.model.PacoteCompra;
 import com.google.android.material.navigation.NavigationView;
 import com.stripe.android.PaymentConfiguration;
@@ -35,8 +33,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
+import java.util.Map;
 
 public class PagamentoActivity extends AppCompatActivity implements AdaptadorCompra.AoClicarNoPacote {
 
@@ -78,6 +77,14 @@ public class PagamentoActivity extends AppCompatActivity implements AdaptadorCom
     }
 
     private void onPaymentSheetResult(PaymentSheetResult paymentSheetResult) {
+        if (paymentSheetResult instanceof PaymentSheetResult.Completed) {
+            Toast.makeText(this, "Pagamento concluído com sucesso!", Toast.LENGTH_SHORT).show();
+        } else if (paymentSheetResult instanceof PaymentSheetResult.Canceled) {
+            Toast.makeText(this, "Pagamento cancelado!", Toast.LENGTH_SHORT).show();
+        } else if (paymentSheetResult instanceof PaymentSheetResult.Failed) {
+            PaymentSheetResult.Failed result = (PaymentSheetResult.Failed) paymentSheetResult;
+            Toast.makeText(this, "Pagamento falhou: " + result.getError().getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void setupLayout() {
@@ -95,9 +102,10 @@ public class PagamentoActivity extends AppCompatActivity implements AdaptadorCom
 
         navigationView.setNavigationItemSelectedListener(item -> {
             Fragment fragment = null;
+            Intent intent = null;
             switch (item.getItemId()) {
                 case R.id.nav_home:
-                    fragment = new HomeFragment(); // Substitua pelo seu fragmento real
+                    intent = new Intent(this, HomeActivity.class );
                     break;
                 case R.id.nav_comprar_pacotes:
                     fragment = new ComprarPacotesFragment();
@@ -107,7 +115,9 @@ public class PagamentoActivity extends AppCompatActivity implements AdaptadorCom
                     break;
             }
 
-            if (fragment != null) {
+            if (intent != null){
+                startActivity(intent);
+            } else if (fragment != null) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
             }
 
@@ -136,7 +146,7 @@ public class PagamentoActivity extends AppCompatActivity implements AdaptadorCom
     }
 
     private void createPaymentIntent(PacoteCompra pacoteModelo) {
-        String url = "https://cf95-143-137-219-148.ngrok-free.app/create-payment-intent";
+        String url = "https://e0b7-143-137-216-138.ngrok-free.app/create-payment-intent"; // URL do seu backend
         try {
             JSONObject paymentData = new JSONObject();
             paymentData.put("amount", pacoteModelo.calcularPrecoTotal() * 100); // Stripe usa centavos
@@ -163,10 +173,19 @@ public class PagamentoActivity extends AppCompatActivity implements AdaptadorCom
                         error.printStackTrace();
                         Toast.makeText(this, "Erro ao criar PaymentIntent", Toast.LENGTH_SHORT).show();
                     }
-            );
+            ) {
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String, String> headers = new HashMap<>();
+                    headers.put("Authorization", "Bearer your-auth-token"); // Adicione seu token de autenticação aqui
+                    System.out.println("Authorization Header: Bearer your-auth-token");  // Adicione este log
+                    return headers;
+                }
+            };
             Volley.newRequestQueue(this).add(jsonObjectRequest);
         } catch (JSONException e) {
             e.printStackTrace();
         }
     }
 }
+
