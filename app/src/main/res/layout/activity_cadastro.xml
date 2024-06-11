@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/new_background"
+    android:background="@drawable/background_cadastro"
     android:gravity="center_horizontal|center_vertical"
     android:orientation="vertical"
     android:paddingLeft="32dp"
