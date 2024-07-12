@@ -1,0 +1,1 @@
+Esse projeto foi baseado na ideia de que nossa empresa no curso, A Apollo Teck, venderia pacotes de viagem customizaveis, onde o usuario escolheria as opções que ele queria e isso aumentaria o preço da passagem dele ou abaixaria.
